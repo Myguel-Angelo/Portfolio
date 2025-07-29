@@ -106,7 +106,7 @@ export default function Portfolio() {
                   {/* Profile image placeholder */}
                   <div className="absolute inset-8 bg-gray-800 rounded-lg overflow-hidden">
                     <img
-                      src="/profile.jpg"
+                      src="/hero/profile.jpg"
                       alt="Myguel Ângelo - Desenvolvedor Full Stack"
                       className="w-full h-full object-cover"
                     />
@@ -124,7 +124,7 @@ export default function Portfolio() {
 
       {/* About Section */}
       <section id="sobre">
-        {/* <AboutSection /> */}
+        <AboutSection />
       </section>
 
       {/* Tech Section */}

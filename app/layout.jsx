@@ -6,6 +6,7 @@ export const metadata = {
   title: 'Portfólio Myguel',
   description: 'Created by Ângelo - Full Stack Developer',
   generator: 'version 2.0',
+  favicon: '/favicon.ico',
 }
 
 export default function RootLayout({ children }) {
