@@ -48,14 +48,14 @@ export default function Portfolio() {
       </nav>
 
       {/* Hero Section */}
-      <section id="inicio" className="relative min-h-screen flex items-center pt-16">
+      <section id="inicio" className="relative py-24 flex items-center">
         {/* Hexagonal decorative elements */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           <div className="absolute top-20 left-10 w-20 h-20 border-2 border-verde transform rotate-45 opacity-30"></div>
           <div className="absolute top-40 left-1/4 w-16 h-16 border-2 border-verde transform rotate-12 opacity-20"></div>
           <div className="absolute bottom-40 left-20 w-24 h-24 border-2 border-verde transform -rotate-12 opacity-25"></div>
           <div className="absolute top-60 right-1/4 w-32 h-32 border-2 border-verde transform rotate-45 opacity-15"></div>
-          <div className="absolute bottom-20 right-10 w-20 h-20 border-2 border-verde transform -rotate-45 opacity-30"></div>
+          <div className="absolute bottom-20 right-10 w-20 h-20 border-2 hidden sm:block border-verde transform -rotate-45 opacity-30"></div>
         </div>
 
         <div className="max-w-5xl mx-auto z-10 px-4 sm:px-6 lg:px-8 w-full">
@@ -80,7 +80,7 @@ export default function Portfolio() {
                   Saiba mais
                 </Button>
 
-                <div className="flex space-x-4">
+                <div className="flex justify-center w-full space-x-4">
                   <a href="https://www.instagram.com/angelonunes_my/" className="text-gray-400 hover:text-verde transition-colors" aria-label="Instagram" target="blank">
                     <Instagram size={24} />
                   </a>
@@ -98,13 +98,13 @@ export default function Portfolio() {
             <div className="relative flex justify-center lg:justify-end">
               <div className="relative">
                 {/* Hexagonal frame for profile image */}
-                <div className="relative w-80 h-80 md:w-96 md:h-96">
+                <div className="relative w-[300px] h-[300px] sm:w-[360px] sm:h-[360px] md:w-96 md:h-96">
                   {/* Main hexagonal border */}
-                  <div className="absolute z-0 inset-0 border-2 border-verde transform rotate-45 opacity-60"></div>
-                  <div className="absolute z-0 inset-4 border-2 border-verde transform -rotate-12 opacity-40"></div>
+                  <div className="absolute z-0 inset-0 border-2 hidden sm:block border-verde transform rotate-45 opacity-60 overflow-hidden"></div>
+                  <div className="absolute z-0 inset-4 border-2 hidden sm:block border-verde transform -rotate-12 opacity-40 overflow-hidden"></div>
 
                   {/* Profile image placeholder */}
-                  <div className="absolute inset-8 bg-gray-800 rounded-lg overflow-hidden">
+                  <div className="absolute inset-2 bg-gray-800 sm:rounded-lg rounded- rounded-tr-none overflow-hidden">
                     <img
                       src="/hero/profile.jpg"
                       alt="Myguel Ângelo - Desenvolvedor Full Stack"
@@ -114,7 +114,7 @@ export default function Portfolio() {
                 </div>
 
                 {/* Additional decorative hexagons */}
-                <div className="absolute -top-8 -right-8 w-16 h-16 border-2 border-verde transform rotate-12 opacity-30"></div>
+                <div className="absolute -top-8 -right-8 w-16 h-16 border-2 hidden sm:block border-verde transform rotate-12 opacity-30"></div>
                 <div className="absolute -bottom-8 -left-8 w-20 h-20 border-2 border-verde transform -rotate-45 opacity-25"></div>
               </div>
             </div>
