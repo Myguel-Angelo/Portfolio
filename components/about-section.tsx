@@ -24,11 +24,11 @@ const tabsData: TabContent[] = [
     icon: <User size={20} />,
     content: {
       paragraphs: [
-        "Olá! Sou Myguel Ângelo, um desenvolvedor Full Stack apaixonado por tecnologia e inovação. Minha jornada na programação começou há alguns anos e desde então tenho me dedicado a criar soluções digitais que fazem a diferença.",
-        "Acredito que a tecnologia tem o poder de transformar vidas e negócios. Por isso, estou sempre em busca de novos desafios e oportunidades para aplicar meus conhecimentos de forma criativa e eficiente, sempre focando na experiência do usuário e na qualidade do código.",
+        "Me chamo Myguel Ângelo Costa Nunes, cristão, nascido e criado no Maranhão. Sempre fui curioso por tecnologia, eletrônica e essas coisas. Já desde novo gosto de desmontar e entender como as coisas funcionam para poder criar minhas próprias ideias. Além da programação, estudo música e também pratico vôlei no tempo livre.",
+        "No geral, sou uma pessoa tranquila, mas quando me envolvo com algo, mergulho de verdade. Gosto de aprender coisas novas e acredito bastante no trabalho em equipe, em uma boa colaboração e na troca de experiências.",
       ],
-      image: "/placeholder.svg?height=200&width=300",
-      imageAlt: "Workspace com piano e laptop",
+      image: "/about/eu.png",
+      imageAlt: "Workspace com celular e laptop",
     },
   },
   {
@@ -37,24 +37,24 @@ const tabsData: TabContent[] = [
     icon: <GraduationCap size={20} />,
     content: {
       paragraphs: [
-        "Minha formação acadêmica inclui cursos especializados em Desenvolvimento Web e Ciência da Computação. Estou sempre me atualizando com as mais recentes tecnologias e metodologias do mercado.",
-        "Além da formação formal, invisto constantemente em cursos online, certificações e participação em comunidades de desenvolvedores. Acredito que o aprendizado contínuo é fundamental para se manter relevante nesta área em constante evolução.",
+        "Minha base técnica veio do curso de Automação Industrial no IFMA, onde aprendi eletricidade, eletrônica, microcontroladores e automação de processos e lógica de programação. Foi lá que meu interesse na área se firmou de verdade.",
+        "Hoje, aprofundo o conhecimento na graduação em Ciência da Computação pela UFMA, estudando mais lógica e a parte matemática e computacional das coisas. O curso é desafiador, mas é nele que pretendo seguir até a formação e outros objetivos futuros nessa área."
       ],
-      image: "/placeholder.svg?height=200&width=300",
-      imageAlt: "Livros de formação e computador",
+      image: "/about/formacao.png",
+      imageAlt: "Imagem dividida, automação industrial e ciência da computação",
     },
   },
   {
     id: 3,
-    title: "Experiência",
+    title: "Trilha Tech",
     icon: <Code size={20} />,
     content: {
       paragraphs: [
-        "Tenho experiência sólida no desenvolvimento de aplicações web modernas, trabalhando com tecnologias como React, Next.js, Node.js, TypeScript e bancos de dados relacionais e não-relacionais.",
-        "Já participei de projetos diversos, desde landing pages responsivas até sistemas complexos de gerenciamento. Minha abordagem sempre prioriza código limpo, performance otimizada e arquiteturas escaláveis.",
+        "Minha trajetória como programador começou de forma bem prática ainda no IFMA, mexendo com projetos de automação e prototipagem, atuando como bolsista no laboratório MaraMaker ou participando de competições de robótica. Depois disso, comecei a estudar desenvolvimento web por conta própria e fiz alguns freelas pequenos.",
+        "Então ingressei no programa Trilhas Inova Maranhão, e trabalhei com backend, APIs e banco de dados. Lá tive vivenciei mais ainda o trabalho com equipe multidisciplinar, sendo líder em alguns desafios do programa."
       ],
-      image: "/placeholder.svg?height=200&width=300",
-      imageAlt: "Setup de programação com múltiplos monitores",
+      image: "/about/trilha-tech.png",
+      imageAlt: "Pessoa andando em uma trilha",
     },
   },
   {
@@ -63,11 +63,11 @@ const tabsData: TabContent[] = [
     icon: <Target size={20} />,
     content: {
       paragraphs: [
-        "Meu objetivo é continuar crescendo como desenvolvedor Full Stack, contribuindo para projetos inovadores que impactem positivamente a vida das pessoas. Busco sempre trabalhar em equipes colaborativas e ambientes desafiadores.",
-        "No futuro próximo, planejo me especializar ainda mais em arquiteturas de microsserviços e tecnologias emergentes como IA e Machine Learning, sempre mantendo o foco na criação de soluções robustas e escaláveis.",
+        "Meu objetivo é continuar crescendo como desenvolvedor Full Stack e trabalhar com projetos que tenham propósito. Quero construir uma boa carreira e quem sabe, inspirar outros que estão começando de onde eu comecei.",
+        "Em um futuro próximo, gostaria de me especializar, e estudar ainda mais arquiteturas de software, microserviços e as novas tecnologias como IA e Machine Learning.",
       ],
-      image: "/placeholder.svg?height=200&width=300",
-      imageAlt: "Metas e gráfico de crescimento",
+      image: "/about/objetivo.png",
+      imageAlt: "Alvo e meta de objetivos",
     },
   },
 ]
@@ -77,11 +77,11 @@ export function AboutSection() {
   const currentTab = tabsData.find((tab) => tab.id === activeTab) || tabsData[0]
 
   return (
-    <section id="sobre" className="min-h-screen flex items-center justify-center bg-gray-900 py-20">
+    <section id="sobre" className="min-h-screen flex items-center justify-center bg-[#0f0f0f] py-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Conheça mais <span className="text-green-400">sobre mim</span>
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
+            Conheça mais <span className="text-verde">sobre mim</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             Descubra minha trajetória, formação e objetivos profissionais
@@ -90,14 +90,14 @@ export function AboutSection() {
 
         <div className="relative">
           {/* Decorative indicator */}
-          <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-3 h-3 bg-green-400 rounded-full"></div>
+          <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-verde rounded-full"></div>
 
           <Card className="bg-white text-black overflow-hidden shadow-2xl">
             <div className="flex flex-col lg:flex-row min-h-[500px]">
               {/* Content Area */}
-              <div className="flex-1 p-8 lg:p-12">
+              <div className="flex-1 p-6 md:p-8 lg:p-12">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="text-green-500">{currentTab.icon}</div>
+                  <div className="text-verde">{currentTab.icon}</div>
                   <h3 className="text-3xl font-bold text-gray-800">{currentTab.title}</h3>
                 </div>
 
@@ -114,7 +114,7 @@ export function AboutSection() {
                     <img
                       src={currentTab.content.image || "/placeholder.svg"}
                       alt={currentTab.content.imageAlt}
-                      className="rounded-lg shadow-md max-w-full h-auto"
+                      className="rounded-lg shadow-md w-full h-auto max-h-[230px] object-cover"
                     />
                   </div>
                 )}
@@ -130,10 +130,9 @@ export function AboutSection() {
                         onClick={() => setActiveTab(tab.id)}
                         className={`
                           relative p-6 rounded-lg text-left transition-all duration-300 group
-                          ${
-                            activeTab === tab.id
-                              ? "bg-green-500 text-white shadow-lg transform scale-105"
-                              : "bg-gray-200 text-gray-600 hover:bg-gray-300 hover:text-gray-800"
+                          ${activeTab === tab.id
+                            ? "bg-verde text-white shadow-lg transform scale-105"
+                            : "bg-gray-200 text-gray-600 hover:bg-gray-300 hover:text-gray-800"
                           }
                         `}
                       >
@@ -144,7 +143,7 @@ export function AboutSection() {
                             ${activeTab === tab.id ? "bg-white/20" : "bg-white"}
                           `}
                           >
-                            <div className={activeTab === tab.id ? "text-white" : "text-green-500"}>{tab.icon}</div>
+                            <div className={activeTab === tab.id ? "text-white" : "text-verde"}>{tab.icon}</div>
                           </div>
                           <div className="text-center lg:text-left">
                             <div
@@ -168,7 +167,7 @@ export function AboutSection() {
 
                         {/* Active indicator */}
                         {activeTab === tab.id && (
-                          <div className="absolute -left-1 top-1/2 transform -translate-y-1/2 w-2 h-8 bg-green-600 rounded-r-full lg:block hidden"></div>
+                          <div className="absolute -left-1 top-1/2 transform -translate-y-1/2 w-2 h-8 bg-verde-2 rounded-r-full lg:block hidden"></div>
                         )}
                       </button>
                     ))}
