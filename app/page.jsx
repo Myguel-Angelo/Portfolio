@@ -129,7 +129,7 @@ export default function Portfolio() {
 
       {/* Tech Section */}
       <section id="techs">
-        {/* <TechSection /> */}
+        <TechSection />
       </section>
 
       {/* Projects Section */}

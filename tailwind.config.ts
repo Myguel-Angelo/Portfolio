@@ -89,11 +89,20 @@ const config: Config = {
 					to: {
 						height: '0'
 					}
+				},
+				'my-bounce': {
+					"0%, 100%": {
+						transform: "translateY(30%)",
+					},
+					"50%": {
+						transform: "none",
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'my-bounce': 'my-bounce 1.5s infinite'
 			}
 		}
 	},
