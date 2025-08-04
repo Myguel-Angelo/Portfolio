@@ -27,13 +27,13 @@ const projects: Project[] = [
     description:
       "Plataforma desenvolvida para a Academia de Cadetes da Polícia Militar do Maranhão para organização e gerenciamento de anotações acadêmicas.",
     longDescription:
-      "Sistema completo de gerenciamento de anotações desenvolvido especificamente para atender às necessidades da Academia de Cadetes da Polícia Militar do Maranhão. A plataforma permite aos cadetes organizar, categorizar e acessar suas anotações de forma eficiente, com recursos de busca avançada e sincronização em tempo real.",
+      "Sistema completo de gerenciamento de anotações desenvolvido especificamente para atender às necessidades dos usuários. A plataforma permite aos oficiais selecionar, anotar e gerenciar suas anotações aos cadetes de forma eficiente, e permite aos cadetes visualiza-las em tempo real.",
     technologies: ["Python", "Django", "PostgreSQL", "HTML", "CSS", "JavaScript"],
-    image: "/placeholder.svg?height=400&width=600&text=Gerenciador+de+Anotações",
-    link: "#",
+    image: "/projects/mappa.png",
+    link: "https://mappacfopm.com.br",
     category: "Sistema Web",
-    year: "2024",
-    client: "Academia de Cadetes - PMMA",
+    year: "10/2024",
+    client: "Academia de Cadetes - APMGD",
   },
   {
     id: 2,
@@ -42,28 +42,43 @@ const projects: Project[] = [
     description:
       "Plataforma completa para publicação e organização de cursos e conteúdos educacionais, desenvolvida para o projeto 'Dodô Aulas'.",
     longDescription:
-      "Plataforma educacional robusta que permite a criação, publicação e gerenciamento de cursos online. Desenvolvida para 'Dodô Aulas', oferece recursos como upload de vídeos, criação de quizzes, acompanhamento de progresso dos alunos, sistema de certificados e dashboard administrativo completo.",
-    technologies: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
-    image: "/placeholder.svg?height=400&width=600&text=Plataforma+Dodô+Aulas",
-    link: "#",
+      "Esse sistema educacional permite a criação, publicação e gerenciamento de cursos online. Desenvolvida para 'Dodô Aulas', oferece recursos como gerenciamento de vídeo-aulas, materiais didáticos, acompanhamento de lives e materiais exclusivos",
+    technologies: ["Python", "Django", "HTML", "PostgreSQL", "Tailwind CSS", "JavaScript"],
+    image: "/projects/dodoaulas.png",
+    link: "https://dodoaulas.com.br/",
     category: "Plataforma Educacional",
-    year: "2024",
+    year: "03/2025",
     client: "Dodô Aulas",
   },
   {
     id: 3,
-    title: "Olimpíada de Matemática Avançada",
+    title: "Olimpíada de Matemática Aplicada",
     subtitle: "Site Oficial do Evento",
     description:
-      "Website oficial da Olimpíada de Matemática Avançada, criada por Adriano Lucas Trindade, estudante de Medicina.",
+      "Website oficial da Olimpíada de Matemática Aplicada, criada por Adriano Lucas Trindade, estudante de Medicina.",
     longDescription:
-      "Site oficial completo para a Olimpíada de Matemática Avançada, incluindo sistema de inscrições, área do participante, divulgação de resultados, cronograma de provas e recursos educacionais. Desenvolvido com foco na experiência do usuário e performance otimizada.",
+      "Site oficial completo para a Olimpíada de Matemática Aplicada, incluindo sistema de inscrições, área do participante, cronograma/calendário e outros recursos. Desenvolvido com foco na experiência do usuário e performance otimizada.",
     technologies: ["HTML", "CSS", "JavaScript", "Python", "SQLite"],
-    image: "/placeholder.svg?height=400&width=600&text=Olimpíada+Matemática",
+    image: "/projects/oma.png",
     link: "#",
     category: "Website Institucional",
-    year: "2024",
+    year: "08/2025",
     client: "Adriano Lucas Trindade",
+  },
+  {
+    id: 4,
+    title: "Desafio 4 - Trilhas",
+    subtitle: "Grupo ZeluS",
+    description:
+      "A ZeluS é uma plataformaa que induz a reciclagem através de um sistema de pontos e recompensas",
+    longDescription:
+      "O site atuou como um MVP da nossa solução. Contando com um sistema de login e cadastro de novos usuários, gameficação, registro de descarte e dashboard interativo.",
+    technologies: ["HTML", "CSS", "Node.js", "MySQL", "Express"],
+    image: "/projects/zelus.png",
+    link: "https://deploy-desafio4-trilhas-5p18.vercel.app/landing/index.html",
+    category: "Website Institucional",
+    year: "04/2025",
+    client: "Trilhas Inova Maranhão",
   },
 ]
 
@@ -100,15 +115,15 @@ export function ProjectsSection() {
   const currentProjectData = projects[currentProject]
 
   return (
-    <section id="projetos" className="min-h-screen flex items-center justify-center bg-gray-900 py-20">
+    <section id="projetos" className="min-h-screen flex items-center justify-center bg-[#0f0f0f] py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         {/* Section Title */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Meus <span className="text-green-400">Projetos</span>
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
+            Meus <span className="text-verde">Projetos</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Conheça alguns dos projetos que desenvolvi, aplicando tecnologias modernas para resolver problemas reais
+            Conheça alguns dos projetos que desenvolvi, aplicando a tecnologias acima.
           </p>
         </div>
 
@@ -122,13 +137,13 @@ export function ProjectsSection() {
                 <img
                   src={currentProjectData.image || "/placeholder.svg"}
                   alt={currentProjectData.title}
-                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                  className="md:w-full md:h-full object-cover transition-transform duration-700 hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
 
                 {/* Project Category Badge */}
                 <div className="absolute top-4 left-4">
-                  <span className="bg-green-400 text-black px-3 py-1 rounded-full text-sm font-medium">
+                  <span className="bg-verde text-gray-800 px-3 py-1 rounded-full text-sm font-medium">
                     {currentProjectData.category}
                   </span>
                 </div>
@@ -137,7 +152,7 @@ export function ProjectsSection() {
                 <div className="absolute top-4 right-4">
                   <Button
                     size="sm"
-                    className="bg-white/20 backdrop-blur-sm hover:bg-green-400 hover:text-black transition-all duration-300"
+                    className="bg-white/20 backdrop-blur-sm hover:bg-verde hover:text-black transition-all duration-300"
                     onClick={() => window.open(currentProjectData.link, "_blank")}
                   >
                     <ExternalLink size={16} />
@@ -161,7 +176,7 @@ export function ProjectsSection() {
                       </div>
                     </div>
                     <h3 className="text-3xl font-bold text-white mb-2">{currentProjectData.title}</h3>
-                    <p className="text-green-400 text-lg font-medium">{currentProjectData.subtitle}</p>
+                    <p className="text-verde text-lg font-medium">{currentProjectData.subtitle}</p>
                   </div>
 
                   {/* Project Description */}
@@ -177,7 +192,7 @@ export function ProjectsSection() {
                       {currentProjectData.technologies.map((tech, index) => (
                         <span
                           key={index}
-                          className="bg-gray-800 text-green-400 px-3 py-1 rounded-full text-sm border border-gray-700 hover:border-green-400 transition-colors duration-300"
+                          className="bg-gray-800 text-verde px-3 py-1 rounded-full text-sm border border-gray-700 hover:border-verde transition-colors duration-300"
                         >
                           {tech}
                         </span>
@@ -188,11 +203,11 @@ export function ProjectsSection() {
                   {/* Action Button */}
                   <div className="pt-4">
                     <Button
-                      className="bg-green-400 text-black hover:bg-green-500 transition-colors duration-300 px-6 py-3"
+                      className="bg-verde text-black hover:bg-verde-2 transition-colors duration-300 px-4 py-3"
                       onClick={() => window.open(currentProjectData.link, "_blank")}
                     >
-                      Ver Projeto Completo
-                      <ExternalLink size={16} className="ml-2" />
+                      <ExternalLink size={16} className="mr-1" />
+                      Ver Projeto
                     </Button>
                   </div>
                 </div>
@@ -203,7 +218,7 @@ export function ProjectsSection() {
           {/* Navigation Arrows */}
           <button
             onClick={prevProject}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-green-400 text-white hover:text-black p-3 rounded-full transition-all duration-300 backdrop-blur-sm z-10"
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-verde text-white hover:text-black p-3 rounded-full transition-all duration-300 backdrop-blur-sm z-10"
             aria-label="Projeto anterior"
           >
             <ChevronLeft size={24} />
@@ -211,7 +226,7 @@ export function ProjectsSection() {
 
           <button
             onClick={nextProject}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-green-400 text-white hover:text-black p-3 rounded-full transition-all duration-300 backdrop-blur-sm z-10"
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-verde text-white hover:text-black p-3 rounded-full transition-all duration-300 backdrop-blur-sm z-10"
             aria-label="Próximo projeto"
           >
             <ChevronRight size={24} />
@@ -224,9 +239,8 @@ export function ProjectsSection() {
             <button
               key={index}
               onClick={() => goToProject(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentProject ? "bg-green-400 scale-125" : "bg-gray-600 hover:bg-gray-500"
-              }`}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentProject ? "bg-verde scale-125" : "bg-gray-600 hover:bg-gray-500"
+                }`}
               aria-label={`Ir para projeto ${index + 1}`}
             />
           ))}
@@ -243,7 +257,7 @@ export function ProjectsSection() {
         <div className="text-center mt-4">
           <button
             onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-            className="text-gray-400 hover:text-green-400 text-sm transition-colors duration-300"
+            className="text-gray-400 hover:text-verde text-sm transition-colors duration-300"
           >
             {isAutoPlaying ? "Pausar apresentação" : "Continuar apresentação"}
           </button>

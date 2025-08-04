@@ -134,7 +134,7 @@ export default function Portfolio() {
 
       {/* Projects Section */}
       <section id="projetos">
-        {/* <ProjectsSection /> */}
+        <ProjectsSection />
       </section>
 
       {/* Contact Section */}
