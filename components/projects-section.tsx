@@ -58,9 +58,9 @@ const projects: Project[] = [
       "Website oficial da Olimpíada de Matemática Aplicada, criada por Adriano Lucas Trindade, estudante de Medicina.",
     longDescription:
       "Site oficial completo para a Olimpíada de Matemática Aplicada, incluindo sistema de inscrições, área do participante, cronograma/calendário e outros recursos. Desenvolvido com foco na experiência do usuário e performance otimizada.",
-    technologies: ["HTML", "CSS", "JavaScript", "Python", "SQLite"],
+    technologies: ["HTML", "Tailwind CSS", "Node", "React", "SQLite"],
     image: "/projects/oma.png",
-    link: "#",
+    link: "https://omaoficial.com.br",
     category: "Website Institucional",
     year: "08/2025",
     client: "Adriano Lucas Trindade",
@@ -115,7 +115,7 @@ export function ProjectsSection() {
   const currentProjectData = projects[currentProject]
 
   return (
-    <section id="projetos" className="min-h-screen flex items-center justify-center bg-[#0f0f0f] py-20">
+    <section id="projetos" className="min-h-none flex items-center justify-center bg-[#0f0f0f] py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         {/* Section Title */}
         <div className="text-center mb-12">

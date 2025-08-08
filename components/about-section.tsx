@@ -24,8 +24,8 @@ const tabsData: TabContent[] = [
     icon: <User size={20} />,
     content: {
       paragraphs: [
-        "Me chamo Myguel Ângelo Costa Nunes, cristão, nascido e criado no Maranhão. Sempre fui curioso por tecnologia, eletrônica e essas coisas. Já desde novo gosto de desmontar e entender como as coisas funcionam para poder criar minhas próprias ideias. Além da programação, estudo música e também pratico vôlei no tempo livre.",
-        "No geral, sou uma pessoa tranquila, mas quando me envolvo com algo, mergulho de verdade. Gosto de aprender coisas novas e acredito bastante no trabalho em equipe, em uma boa colaboração e na troca de experiências.",
+        "Sou Myguel Ângelo Costa Nunes, maranhense e apaixonado por tecnologia desde cedo. Sempre tive curiosidade em entender como as coisas funcionam, desmontando e explorando aparelhos para criar minhas próprias ideias. Além da programação, estudo música e, no tempo livre, gosto de praticar vôlei.",
+        "Tenho um perfil focado e colaborativo. Quando me envolvo em um projeto, mergulho de verdade, buscando entender cada detalhe. Acredito que o aprendizado constante e a troca de experiências são fundamentais para transformar boas ideias em resultados concretos."
       ],
       image: "/about/eu.png",
       imageAlt: "Workspace com celular e laptop",
@@ -37,8 +37,8 @@ const tabsData: TabContent[] = [
     icon: <GraduationCap size={20} />,
     content: {
       paragraphs: [
-        "Minha base técnica veio do curso de Automação Industrial no IFMA, onde aprendi eletricidade, eletrônica, microcontroladores e automação de processos e lógica de programação. Foi lá que meu interesse na área se firmou de verdade.",
-        "Hoje, aprofundo o conhecimento na graduação em Ciência da Computação pela UFMA, estudando mais lógica e a parte matemática e computacional das coisas. O curso é desafiador, mas é nele que pretendo seguir até a formação e outros objetivos futuros nessa área."
+        "Minha trajetória técnica começou no curso de Automação Industrial pelo IFMA, onde desenvolvi conhecimentos em eletricidade, eletrônica, microcontroladores e automação de processos. Foi nesse ambiente que percebi o quanto a tecnologia poderia ser poderosa para criar e transformar.",
+        "Hoje, curso Ciência da Computação na UFMA, aprofundando-me em lógica, matemática e fundamentos computacionais. Vejo a graduação como um alicerce sólido para meus próximos passos, preparando-me para enfrentar desafios complexos e atuar de forma estratégica no mercado de tecnologia."
       ],
       image: "/about/formacao.png",
       imageAlt: "Imagem dividida, automação industrial e ciência da computação",
@@ -50,8 +50,8 @@ const tabsData: TabContent[] = [
     icon: <Code size={20} />,
     content: {
       paragraphs: [
-        "Minha trajetória como programador começou de forma bem prática ainda no IFMA, mexendo com projetos de automação e prototipagem, atuando como bolsista no laboratório MaraMaker ou participando de competições de robótica. Depois disso, comecei a estudar desenvolvimento web por conta própria e fiz alguns freelas pequenos.",
-        "Então ingressei no programa Trilhas Inova Maranhão, e trabalhei com backend, APIs e banco de dados. Lá tive vivenciei mais ainda o trabalho com equipe multidisciplinar, sendo líder em alguns desafios do programa."
+        "Comecei na programação de forma prática ainda no IFMA, desenvolvendo projetos de automação, prototipagem e participando de competições de robótica. Como bolsista no laboratório MaraMaker, aprendi a trabalhar com inovação e resolução de problemas em tempo real. Mais tarde, aprofundei meus estudos em desenvolvimento web e realizei projetos freelancer que reforçaram minha visão de produto e experiência do usuário.",
+        "Participei do programa Trilhas Inova Maranhão, atuando com backend, APIs e bancos de dados. Essa experiência foi marcante, pois trabalhei com equipes multidisciplinares e assumi papéis de liderança, desenvolvendo não só minha capacidade técnica, mas também habilidades de comunicação e gestão."
       ],
       image: "/about/trilha-tech.png",
       imageAlt: "Pessoa andando em uma trilha",
@@ -63,8 +63,8 @@ const tabsData: TabContent[] = [
     icon: <Target size={20} />,
     content: {
       paragraphs: [
-        "Meu objetivo é continuar crescendo como desenvolvedor Full Stack e trabalhar com projetos que tenham propósito. Quero construir uma boa carreira e quem sabe, inspirar outros que estão começando de onde eu comecei.",
-        "Em um futuro próximo, gostaria de me especializar, e estudar ainda mais arquiteturas de software, microserviços e as novas tecnologias como IA e Machine Learning.",
+        "Meu propósito é crescer como ciêntista e desenvolvedor, contribuindo para projetos que façam diferença e entreguem valor real. Quero construir uma carreira sólida, com impacto positivo e que sirva de inspiração para outros que, assim como eu, começaram com poucos recursos, mas muita determinação.",
+        "Nos próximos anos, pretendo me especializar em arquitetura de software, microserviços e explorar mais profundamente Inteligência Artificial e Machine Learning, unindo inovação e eficiência para criar soluções que transformem realidades."
       ],
       image: "/about/objetivo.png",
       imageAlt: "Alvo e meta de objetivos",
@@ -77,7 +77,7 @@ export function AboutSection() {
   const currentTab = tabsData.find((tab) => tab.id === activeTab) || tabsData[0]
 
   return (
-    <section id="sobre" className="min-h-screen flex items-center justify-center bg-[#0f0f0f] py-16">
+    <section id="sobre" className="min-h-none flex items-center justify-center bg-[#0f0f0f] py-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">

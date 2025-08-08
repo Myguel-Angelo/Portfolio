@@ -60,7 +60,7 @@ const techCategories: TechCategory[] = [
 
 export function TechSection() {
   return (
-    <section id="techs" className="min-h-screen flex items-center justify-center bg-black py-20">
+    <section id="techs" className="min-h-none flex items-center justify-center bg-black py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         {/* Section Title */}
         <div className="text-center mb-12">
@@ -105,20 +105,6 @@ export function TechSection() {
               </div>
             </Card>
           ))}
-        </div>
-
-        {/* Additional Info */}
-        <div className="text-center mt-12">
-          <p className="text-gray-400 text-lg">
-            Foco em tecnologias modernas
-          </p>
-          <div className="flex justify-center mt-4">
-            <div className="flex space-x-2">
-              <div className="w-1.5 h-1.5 bg-green-400 rounded-full animate-my-bounce delay-300"></div>
-              <div className="w-1.5 h-1.5 bg-green-400 rounded-full animate-my-bounce delay-500"></div>
-              <div className="w-1.5 h-1.5 bg-green-400 rounded-full animate-my-bounce delay-700"></div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
