@@ -1,14 +1,20 @@
+"use client"
+import { useState } from "react"
+import { X, Menu } from "lucide-react"
 import { Instagram, Linkedin, Github } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { AboutSection } from "@/components/about-section"
 import { TechSection } from "@/components/tech-section"
 import { ProjectsSection } from "@/components/projects-section"
 import { ContactSection } from "@/components/contact-section"
+import { MobileMenu } from "@/components/mobile-menu"
 import TextoDinamico from "@/components/zText"
 
 export default function Portfolio() {
+  const [isOpen, setIsOpen] = useState(false)
+
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-none bg-black text-white">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-sm border-b border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -37,15 +43,64 @@ export default function Portfolio() {
 
             {/* Mobile menu button */}
             <div className="md:hidden">
-              <button className="text-white hover:text-verde">
-                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="md:hidden text-white hover:text-green-400 transition-colors"
+                aria-label="Toggle menu"
+              >
+                {isOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
             </div>
           </div>
         </div>
       </nav>
+      {isOpen && (
+        <div className="fixed inset-0 z-50 bg-black/95 backdrop-blur-sm md:hidden">
+          <div className="flex flex-col items-center justify-center h-full space-y-8">
+            <button onClick={() => setIsOpen(false)} className="absolute top-4 right-4 text-white hover:text-green-400">
+              <X size={24} />
+            </button>
+
+            <nav className="flex flex-col items-center space-y-6 text-xl">
+              <a
+                href="#inicio"
+                onClick={() => setIsOpen(false)}
+                className="text-white hover:text-green-400 transition-colors"
+              >
+                Início
+              </a>
+              <a
+                href="#sobre"
+                onClick={() => setIsOpen(false)}
+                className="text-white hover:text-green-400 transition-colors"
+              >
+                Sobre
+              </a>
+              <a
+                href="#techs"
+                onClick={() => setIsOpen(false)}
+                className="text-white hover:text-green-400 transition-colors"
+              >
+                Techs
+              </a>
+              <a
+                href="#projetos"
+                onClick={() => setIsOpen(false)}
+                className="text-white hover:text-green-400 transition-colors"
+              >
+                Projetos
+              </a>
+              <a
+                href="#contato"
+                onClick={() => setIsOpen(false)}
+                className="text-white hover:text-green-400 transition-colors"
+              >
+                Contato
+              </a>
+            </nav>
+          </div>
+        </div>
+      )}
 
       {/* Hero Section */}
       <section id="inicio" className="relative py-24 flex items-center">
@@ -139,7 +194,7 @@ export default function Portfolio() {
 
       {/* Contact Section */}
       <section id="contato">
-        {/* <ContactSection /> */}
+        <ContactSection />
       </section>
     </div>
   )

@@ -63,19 +63,19 @@ export function ContactSection() {
     {
       icon: <Instagram size={24} />,
       label: "Instagram",
-      url: "#",
+      url: "https://www.instagram.com/angelonunes_my/",
       color: "hover:text-pink-400",
     },
     {
       icon: <Linkedin size={24} />,
       label: "LinkedIn",
-      url: "#",
+      url: "https://www.linkedin.com/in/myguel-%C3%A2ngelo-426a4a2a0/",
       color: "hover:text-blue-400",
     },
     {
       icon: <Github size={24} />,
       label: "GitHub",
-      url: "#",
+      url: "https://github.com/Myguel-Angelo",
       color: "hover:text-gray-300",
     },
   ]
@@ -109,102 +109,9 @@ export function ContactSection() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
-            <Card className="bg-gray-900 border-gray-700 p-8">
-              <div className="mb-6">
-                <h3 className="text-2xl font-bold text-white mb-2">Envie uma mensagem</h3>
-                <p className="text-gray-400">Preencha o formulário e entrarei em contato em breve</p>
-              </div>
-
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
-                      Nome *
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:ring-2 focus:ring-green-400 focus:border-transparent text-white placeholder-gray-400 transition-all duration-300"
-                      placeholder="Seu nome"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                      Email *
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:ring-2 focus:ring-green-400 focus:border-transparent text-white placeholder-gray-400 transition-all duration-300"
-                      placeholder="seu@email.com"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-2">
-                    Assunto *
-                  </label>
-                  <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:ring-2 focus:ring-green-400 focus:border-transparent text-white placeholder-gray-400 transition-all duration-300"
-                    placeholder="Assunto da mensagem"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                    Mensagem *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    required
-                    rows={5}
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:ring-2 focus:ring-green-400 focus:border-transparent text-white placeholder-gray-400 transition-all duration-300 resize-none"
-                    placeholder="Conte-me sobre seu projeto ou ideia..."
-                  />
-                </div>
-
-                <Button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full bg-green-400 hover:bg-green-500 text-black font-semibold py-3 px-6 rounded-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {isSubmitting ? (
-                    <div className="flex items-center justify-center">
-                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-black mr-2"></div>
-                      Enviando...
-                    </div>
-                  ) : (
-                    <div className="flex items-center justify-center">
-                      <Send size={18} className="mr-2" />
-                      Enviar Mensagem
-                    </div>
-                  )}
-                </Button>
-              </form>
-            </Card>
-
+          <div className="">
             {/* Contact Info & Availability */}
-            <div className="space-y-8">
+            <div className="flex flex-col md:flex-row gap-6">
               {/* Contact Information */}
               <Card className="bg-gray-900 border-gray-700 p-8">
                 <h3 className="text-2xl font-bold text-white mb-6">Informações de Contato</h3>
@@ -228,24 +135,19 @@ export function ContactSection() {
               </Card>
 
               {/* Availability Status */}
-              <Card className="bg-gradient-to-r from-green-400/10 to-green-600/10 border-green-400/30 p-8">
+              <Card className="bg-[#1C1C1C] border-green-400/30 p-8">
                 <div className="flex items-center mb-4">
                   <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse mr-3"></div>
                   <h3 className="text-xl font-bold text-white">Status: Disponível para projetos</h3>
                 </div>
                 <p className="text-gray-300 mb-4">
-                  Atualmente aceitando novos projetos e oportunidades de colaboração. Vamos criar algo incrível juntos!
+                  Atualmente aceitando novos projetos e oportunidades de colaboração. Basta entrar em contato que conversamos melhor.
                 </p>
                 <div className="flex items-center text-sm text-gray-400">
                   <Coffee size={16} className="mr-2" />
                   <span>Resposta em até 24 horas</span>
                 </div>
-              </Card>
-
-              {/* Social Links */}
-              <Card className="bg-gray-900 border-gray-700 p-8">
-                <h3 className="text-xl font-bold text-white mb-4">Conecte-se comigo</h3>
-                <div className="flex space-x-4">
+                <div className="flex space-x-4 mt-4">
                   {socialLinks.map((social, index) => (
                     <a
                       key={index}
@@ -268,21 +170,7 @@ export function ContactSection() {
       {/* Footer Bottom */}
       <div className="border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Brand & Description */}
-            <div className="space-y-4">
-              <div className="text-2xl font-bold text-green-400">Myguel Ângelo</div>
-              <p className="text-gray-400 text-sm leading-relaxed">
-                Desenvolvedor Full Stack apaixonado por criar soluções digitais inovadoras e eficientes. Transformando
-                ideias em realidade através do código.
-              </p>
-              <div className="flex items-center text-sm text-gray-500">
-                <Heart size={14} className="mr-1 text-red-400" />
-                <span>Feito com amor e</span>
-                <Code size={14} className="mx-1 text-green-400" />
-                <span>muito código</span>
-              </div>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
             {/* Quick Links */}
             <div className="space-y-4">
@@ -305,28 +193,20 @@ export function ContactSection() {
             <div className="space-y-4">
               <h4 className="text-lg font-semibold text-white">Informações</h4>
               <div className="space-y-2 text-sm text-gray-400">
-                <p>📍 São Luís, Maranhão - Brasil</p>
-                <p>🕒 Disponível para projetos remotos</p>
-                <p>💼 Freelancer & Desenvolvedor</p>
-                <p>🚀 Sempre aprendendo novas tecnologias</p>
+                <p>São Luís, Maranhão - Brasil</p>
+                <p>Disponível para contrado</p>
+                <p>Freelancer & Desenvolvedor</p>
               </div>
             </div>
           </div>
 
           {/* Copyright */}
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center">
+          <div className="mt-4 pt-4 text-center">
             <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
               <p className="text-gray-400 text-sm">
                 © {new Date().getFullYear()} Myguel Ângelo. Todos os direitos reservados.
               </p>
-              <div className="flex items-center space-x-4 text-sm text-gray-500">
-                <span>Desenvolvido com Next.js & Tailwind CSS</span>
-                <div className="flex space-x-1">
-                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse delay-100"></div>
-                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse delay-200"></div>
-                </div>
-              </div>
+
             </div>
           </div>
         </div>
